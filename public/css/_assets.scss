@@ -1,0 +1,62 @@
+$mainColor: #444;
+$brandColor: #C73133;
+$borderColor: #707070;
+$lightBorderColor: #ddd;
+
+$font: "font";
+$bold: "bold";
+
+/* mixins */
+@mixin ellipsisOverFllow($width: 100%){
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: $width;
+}
+
+@mixin circleRadius($width){
+	width: $width;
+	height: $width;
+	border-radius:$width;
+}
+
+@mixin boxSizing(){
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin myTransition($sec: 0.4s, $ease: ease-out){
+	-ms-transition: all $sec $ease;
+	-webkit-transition: all $sec $ease;
+	-moz-transition: all $sec $ease;
+	transition: all $sec $ease;
+}
+
+@mixin myTranslate($xVal: 0, $yVal: 0){
+	-ms-transform: translate($xVal, $yVal);
+	-webkit-transform: translate($xVal, $yVal);
+    -moz-transform: translate($xVal, $yVal);
+    transform: translate($xVal, $yVal);
+}
+
+@mixin myRotate($deg){
+	-ms-transform: rotate($deg);
+	-webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+@mixin myTranslateAndRotate($xVal: 0, $yVal: 0, $deg: 0){
+	-ms-transform: rotate($deg) translate($xVal, $yVal);
+    -webkit-transform: rotate($deg) translate($xVal, $yVal);
+    -moz-transform: rotate($deg) translate($xVal, $yVal);
+    transform: rotate($deg) translate($xVal, $yVal);
+}
+
+@mixin myTranslateAndRotateAndScale($xVal: 0, $yVal: 0, $deg: 0, $sVal: 1){
+	-ms-transform: translate($xVal, $yVal) rotate($deg) scale($sVal);
+    -webkit-transform: translate($xVal, $yVal) rotate($deg) scale($sVal);
+    -moz-transform: translate($xVal, $yVal) rotate($deg) scale($sVal);
+    transform: translate($xVal, $yVal) rotate($deg) scale($sVal);
+}
